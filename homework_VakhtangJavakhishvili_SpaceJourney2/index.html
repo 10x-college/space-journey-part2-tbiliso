@@ -123,7 +123,7 @@
             </div>
         </section>
         <!-- flight schedule section  -->
-         <section id="schedule">
+        <section id="schedule">
             <!-- Hologram Container -->
             <div class="hologram-overlay">
                 <h2>
@@ -179,10 +179,62 @@
                             <td class="status-stop">Cancelled</td>
                         </tr>
                     </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="5"><span>SCANNING FOR INCOMING VESSELS...</span></td>
+                        </tr>
+                    </tfoot>
                 </table>
             </div>
-         </section>
+        </section>
+        <section id="booking">
+            <div class="kiosk-interface">
+                <h2>
+                    SELF-SERVICE TERMINAL
+                </h2>
+                <form action="#" method="post">
+                    <!-- Identity -->
+                    <fieldset>
+                        <legend>
+                            IDENTITY VERIFICATION
+                        </legend>
+                        <label for="fdest">Full Designation</label>
+                        <input type="text" id="fdest" name="full designation">
+                    </fieldset>
+                    <!-- Flight Parameters -->
+                    <fieldset>
+                        <legend>
+                            FLIGHT PARAMETERS
+                        </legend>
+                        <label for="destination">Destination Planet:</label>
+                        <input type="text" id="destination" list="planets" name="destination"
+                            placeholder="Search for the planet...">
+                        <!-- dropdown list like select only with search -->
+                        <datalist id="planets">
+
+                            <option value="Andromeda">Andromeda</option>
+                            <option value="Mars Prime">Mars Prime</option>
+                            <option value="Orion Nebula">Orion Nebula</option>
+                            <option value="Saturn Rings">Saturn Rings</option>
+                        </datalist>
+                        <label for="cabin_class">Cabin Class</label>
+                        <select name="cabin class" id="cabin_class">
+                            <option value="" selected disabled hidden>Choose class</option>
+                            <option value="economy">Economy (Stasis Pod)</option>
+                            <option value="business">Business (Quarters)</option>
+                            <option value="first (zero-g suite)">First (Zero-G Suite)</option>
+                        </select>
+                    </fieldset>
+                    <button type="submit">AUTHORIZE CREDIT TRANSFER</button>
+                </form>
+            </div>
+        </section>
     </main>
+    <footer>
+        <p>
+            TERMINAL X-OMEGA // OPERATED BY GALACTIC FEDERATION // SAFETY NOT GUARANTEED
+        </p>
+    </footer>
 </body>
 
 </html>
